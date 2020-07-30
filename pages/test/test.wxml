@@ -1,0 +1,18 @@
+<view class='name'>{{message.name}}</view>
+<view wx:for='{{message.content.titles}}'>
+  <view class='disc'>{{index + 1}}. {{item.disc}}</view>
+  <radio-group wx:if='{{item.type === "单选题"}}' class='radio-group' bindchange='answerchange' data-index='{{index}}'>
+    <view wx:for='{{item.options}}' wx:for-item='item2' wx:for-index='index2' class='radio-item'>
+      <radio id="{{item2}}" value="{{alphas[index2]}}" checked="{{item.checked}}"></radio>
+      <label class="label-2-text" for="{{item2}}"><text>{{alphas[index2]}}. {{item2}}</text></label>
+    </view>
+  </radio-group>
+    <checkbox-group wx:if='{{item.type === "多选题"}}' class='radio-group' bindchange='answerchange' data-index='{{index}}'>
+    <view wx:for='{{item.options}}' wx:for-item='item2' wx:for-index='index2' class='radio-item'>
+      <checkbox id="{{item2}}" value="{{alphas[index2]}}" checked="{{item.checked}}"></checkbox>
+      <label class="label-2-text" for="{{item2}}"><text>{{alphas[index2]}}. {{item2}}</text></label>
+    </view>
+  </checkbox-group>
+  <view class='lefttime'>{{lefttime}}</view>
+  <view class='complete' bindtap='complete'>完成</view>
+</view>

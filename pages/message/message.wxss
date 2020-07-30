@@ -1,0 +1,33 @@
+/* pages/message/message.wxss */
+.class-wrapper {
+  display: flex;
+  font-size:30rpx;
+  border-bottom:solid 1px #ccc;
+  padding:20rpx;
+  height:50rpx;
+  align-items: center;
+}
+.class-type {
+  flex:0 0 25%;
+  text-align:center;
+  color:#555;
+}
+.class-now {
+  color:#333;
+  font-weight:bold;
+  font-size:36rpx;
+  line-height:1.2;
+}
+.class-add {
+  flex:1;
+  color:teal;
+}
+.class-add text {
+  background-color:rgb(204, 221, 245);
+  padding:0 17rpx;
+  position:relative;
+  left:300rpx;
+}
+.read {
+  color:#777
+}

@@ -1,0 +1,34 @@
+<view class='top-wrapper'>
+  <view class='top-item {{now === 1 ? "now" : ""}}' bindtap='change1'>我上传的</view>
+  <view class='top-item {{now === 2 ? "now" : ""}}' bindtap='change2'>我收到的</view>
+</view>
+<scroll-view class='mysubmit' scroll-y='true' wx:if='{{state === "submit" && title === "我的试卷库"}}'>
+  <view wx:for='{{mysubmit}}' class='mysubmit-item'>
+    <image src='../../images/icons/myStudy-active.png' class='test-image'></image>
+    <view class='test-name'>{{item.name}}</view>
+    <view class='test-date'>{{item.date}}</view>
+  </view>
+</scroll-view>
+<scroll-view class='mysubmit' scroll-y='true' wx:if='{{state === "receive" && title === "我的试卷库"}}'>
+  <view wx:for='{{myreceivetests}}' class='mysubmit-item'>
+    <image src='../../images/icons/myStudy-active.png' class='test-image'></image>
+    <view class='test-name'>{{item.name}}</view>
+    <view class='test-date'>{{item.date}}</view>
+  </view>
+</scroll-view>
+<scroll-view class='mysubmit' scroll-y='true' wx:if='{{state === "submit" && title === "我的课件库"}}'>
+  <view wx:for='{{mysubmitppt}}' class='mysubmit-item' data-fileid='{{item.fileid}}' bindtap='openppt'>
+    <image src='../../images/icons/myStudy-active.png' class='test-image'></image>
+    <view class='test-name'>{{item.name}}</view>
+    <view class='test-date'>{{item.date}}</view>
+  </view>
+</scroll-view>
+<scroll-view class='mysubmit' scroll-y='true' wx:if='{{state === "receive" && title === "我的课件库"}}'>
+  <view wx:for='{{myreceiveppts}}' class='mysubmit-item' data-fileid='{{item.fileid}}' bindtap='openppt'>
+    <image src='../../images/icons/myStudy-active.png' class='test-image'></image>
+    <view class='test-name'>{{item.name}}</view>
+    <view class='test-date'>{{item.date}}</view>
+  </view>
+</scroll-view>
+<view class='create-paper' bindtap='createpaper' wx:if='{{title === "我的试卷库"}}'>制作试卷</view>
+<view class='create-paper' bindtap='submitppt' wx:if='{{title === "我的课件库"}}'>上传课件</view>

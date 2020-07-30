@@ -1,0 +1,61 @@
+.header-wrapper {
+  padding:50rpx 0;
+  position: relative;
+  background-color: #fff;
+}
+.header {
+  text-align: center;
+  font-size:36rpx;
+}
+.contentname {
+  position: absolute;
+  left:39%;
+  color:#aaa;
+  padding:5rpx;
+}
+.info {
+  position: relative;
+  padding:30rpx;
+  color:#777;
+  background-color: #fff;
+}
+.info1 {
+  position: absolute;
+  left:30rpx;
+}
+.info2 {
+  position: absolute;
+  right:30rpx;
+}
+.publish {
+  position:fixed;
+  left:50%;
+  bottom:25rpx;
+  transform: translateX(-50%);
+  color:#fff;
+  background-color: #33f;
+  border-radius:30rpx;
+  padding:15rpx 90rpx;
+}
+.time {
+  display: flex;
+  padding:30rpx;
+  color:#777;
+}
+.time-text {
+  flex: 1
+}
+.time-text2 {
+  flex: 0 0 70rpx
+}
+.time input {
+  flex: 0 0 130rpx;
+  color:#ae3
+}
+.textarea {
+  width: 90%;
+  height: 200rpx;
+  margin:25rpx;
+  padding:12rpx;
+  border: solid #777 1px
+}

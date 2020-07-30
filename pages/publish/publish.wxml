@@ -1,0 +1,7 @@
+<view class='header'>选择{{type}}</view>
+<scroll-view class='wrapper' scroll-y='true'>
+  <view wx:for='{{content}}' class='item' bindtap="gotocheck" data-index='{{index}}'>
+    <view class='name'>{{item.name}}</view>
+    <view class='date'>{{item.date}}</view>
+  </view>
+</scroll-view>

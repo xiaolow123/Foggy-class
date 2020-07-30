@@ -1,0 +1,25 @@
+<view class='wrapper'>
+  <view class='header-wrapper'>
+    <view class='header'>发布名称</view>
+    <input value='{{contentname}}' 
+           class='contentname' 
+           bindinput="namechange"
+           placeholder="请输入名称"
+           ></input>
+  </view>
+  <view class='info'>
+    <text class='info1'>发布班级</text>
+    <text class='info2'>{{classname}}</text>
+  </view>
+  <view class='time'>
+    <text class='time-text'>完成时间</text>
+    <input placeholder="请输入" bindinput="timechange"/>
+    <view class='time-text2'>分钟</view>
+  </view>
+  <textarea bindinput="noticechange" 
+            class='textarea' 
+            placeholder="公告内容"
+            wx:if='{{type === "公告"}}'
+            ></textarea>
+  <view class='publish' bindtap='publish'>发布</view>
+</view>  

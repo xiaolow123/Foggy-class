@@ -1,0 +1,13 @@
+<input></input>
+<scroll-view class='wrapper' scroll-y='true'>
+  <view class='text'>授课教师</view>
+  <view class='person'>
+    <image src='{{teacher.avatarurl}}'></image>
+    <view class='name'>{{teacher.name}}</view>
+  </view>
+  <view class='text'>学生</view>
+  <view wx:for='{{students}}' class='person'>
+    <image src='{{item.avatarurl}}'></image>
+    <text class='name'>{{item.name}}</text>  
+  </view>
+</scroll-view>

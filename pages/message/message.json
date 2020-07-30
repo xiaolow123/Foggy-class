@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "notice":"../../components/notice/notice"
+  },
+  "navigationBarTitleText": "消息"
+
+}

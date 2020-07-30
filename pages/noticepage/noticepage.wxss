@@ -1,0 +1,10 @@
+/* pages/noticepage/noticepage.wxss */
+.name {
+  padding: 30rpx;
+  font-size:36rpx;
+  text-align: center;
+}
+.textarea {
+  width: 100%;
+  padding:30rpx
+}

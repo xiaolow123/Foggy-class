@@ -1,0 +1,36 @@
+/* pages/classmates/classmates.wxss */
+.wrapper {
+  display: flex;
+  margin: 30rpx;
+  flex-direction: column;
+  position: fixed;
+  left:0;
+  right:0;
+  top:7%;
+  bottom:0;
+  overflow: hidden;
+}
+input {
+  border: 3rpx solid #eee;
+  padding:5rpx;
+  border-radius:7rpx;
+  margin:30rpx
+}
+.person {
+  position: relative;
+}
+.name{
+  position:absolute;
+  top:35%;
+  left:20%;
+  transform: translateY(-50%);
+}
+image {
+  height:90rpx;
+  width:90rpx;
+  border-radius: 50%;
+}
+.text {
+  font-size:36rpx;
+  margin:20rpx 0;
+}

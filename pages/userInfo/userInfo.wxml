@@ -1,0 +1,20 @@
+<!--pages/userInfo/userInfo.wxml-->
+<view class='header'>
+  <view class='htext1'>编辑个人信息</view>
+  <view class='htext2' bindtap='save'>保存</view>
+</view>
+<image src='{{avatarurl}}'/>
+<view class='info'>
+  <view class='infoitem'>
+    <view class='infotext'>姓名</view>
+    <input class='infoval' value='{{name}}' bindinput="namechange"/>
+  </view>
+  <view class='infoitem'>
+    <view class='infotext'>身份</view>
+    <input class='infoval' placeholder="请填写学生或老师" value='{{indent}}' bindinput="indentchange"/>
+  </view>
+  <view class='infoitem'>
+    <view class='infotext'>邮箱</view>
+    <input class='infoval' placeholder="请按照合格的邮箱格式填写" value='{{email}}' bindinput="emailchange"/>
+  </view>
+</view>  

@@ -1,0 +1,11 @@
+<view class='create'>
+  <view class='title'>课程</view>
+  <input placeholder="请输入课程名称" class='course' bindinput='coursename'/>
+  <view class='title'>班级</view>
+  <view wx:for='{{classarray}}' class='classes'>
+    <input placeholder="请输入班级名称" bindinput='classname' data-index='{{index}}'/>
+    <view class='delete' data-index='{{index}}' bindtap='deleteitem'>删除</view>
+  </view>
+  <view class='append' bindtap='appendclass'>添加班级</view>
+  <view class='finish' bindtap='complete'>完成</view>
+</view>

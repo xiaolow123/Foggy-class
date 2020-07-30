@@ -1,0 +1,22 @@
+<view class='class-wrapper'>
+  <text class='class-type {{now === 0?"class-now":""}}' bindtap="change">全部</text>
+  <text class='class-type {{now === 1?"class-now":""}}' bindtap="change1">课件</text>
+  <text class='class-type {{now === 2?"class-now":""}}' bindtap="change2">试卷</text>
+  <text class='class-type {{now === 3?"class-now":""}}' bindtap="change3">公告</text>
+</view>
+<view>
+  <notice wx:for="{{messages}}"
+          teacher="{{item.teacher + '老师'}}" 
+          type="{{item.type}}"
+          classname="{{item.classname}}"
+          name="{{item.name}}"
+          date="{{item.date}}"
+          class='{{item.ifread?"read":""}}'
+          bindtap="read"
+          data-index="{{index}}"
+          data-content='{{item.content}}'
+          wx:key='index'
+          wx:if='{{item.type===state || state==="全部"}}'
+          >
+  </notice>
+</view>

@@ -1,0 +1,25 @@
+/* components/notice/notice.wxss */
+.notice-wrapper {
+  margin: 30rpx;
+  display: flex;
+  flex-direction: column;
+  font-size:30rpx;
+  border-bottom:solid 1px #ccc;
+  padding-bottom:30rpx;
+}
+.bigtext {
+  font-size:36rpx;
+}
+.notice-top {
+  display: flex;
+  margin-bottom:20rpx;
+  align-items:center;
+}
+.notice-date {
+  flex: 1;
+  text-align:right;
+}
+.studentread {
+  position: absolute;
+  right:50rpx
+}

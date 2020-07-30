@@ -1,0 +1,38 @@
+.header {
+  font-weight: bold;
+  padding:30rpx 0;
+  margin:0 30rpx;
+  border-bottom: 3rpx solid #ccc;
+}
+.usage-wrapper {
+  padding:30rpx;
+  display: flex;
+  border-bottom: 7rpx solid #eee;
+  font-size:26rpx;
+}
+.usage {
+  flex: 25%;
+}
+.usage image {
+  width:60rpx;
+  height:60rpx;
+  margin-left:20rpx;
+}
+.subheader {
+  font-weight: bold;
+  font-size: 36rpx;
+  padding:30rpx;
+}
+.journal {
+  display: flex;
+  margin:15rpx 0;
+}
+.journal-content {
+  flex:25%;
+  text-align: center;
+  color: #ccc
+}
+.focus {
+  font-weight: bold;
+  color:#000
+}

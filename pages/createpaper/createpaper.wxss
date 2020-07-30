@@ -1,0 +1,136 @@
+/* pages/createpaper/createpaper.wxss */
+.title {
+  padding:15rpx;
+  border-bottom:1px solid #ccc;
+}
+.title input{
+  text-align: center;
+}
+.content {
+  display:flex;
+  position:fixed;
+  top:82.5rpx;
+  bottom:0;
+  left:0;
+  right:0;
+}
+.sidebar {
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+}
+.add {
+  text-align:right;
+  color:#55f;
+  flex:1;
+  font-size:36rpx;
+}
+.main {
+  flex: 0 0 70%;
+  position:relative;
+}
+.sideitem {
+  display: flex;
+  font-size:32rpx;
+  padding: 7rpx 0;
+  align-items:center;
+}
+.delete {
+  color:rgb(255, 75, 20);
+  font-size:22rpx;
+  position:absolute;
+  right:7rpx
+}
+.create-wrapper {
+  position:fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background-color:rgba(0,0,0,.5);
+  font-size:30rpx
+}
+.create {
+  display:flex;
+  position:absolute;
+  top:50%;
+  left:15%;
+  right:15%;
+  transform: translateY(-50%);
+  flex-direction:column;
+  background-color:#fff;
+  border-radius:15rpx;
+}
+.create-item {
+  padding:25rpx;
+}
+.option {
+  display:flex;
+  padding:20rpx 0;
+  font-size:32rpx
+}
+.option-content {
+  padding-left:12rpx
+}
+.addoption {
+  display: inline-block;
+  padding:12rpx;
+  border-radius:20rpx;
+  background-color: #55f;
+  position:absolute;
+  left:50%;
+  bottom:30rpx;
+  transform: translateX(-50%)
+}
+.disc {
+  height:100rpx;
+  width:100%;
+}
+.edit {
+  font-size:32rpx;
+  position:absolute;
+  left:0;
+  right:0;
+  top:65%;
+  bottom:0;
+}
+.edittext {
+  background-color:#ccc;
+  padding:12rpx
+}
+.tip {
+  padding:7rpx 0;
+  color:#777;
+  font-size: 30rpx
+}
+.wrapper {
+  padding:7rpx;
+  border-right:3px solid #ccc;
+  height:100%;
+  position: relative
+}
+.wrapper2 {
+  padding:7px;
+  overflow: hidden;
+  height:65%;
+}
+.simpleanswer {
+  padding:7px;
+}
+.simpleanswer textarea{
+  width:100%
+}
+.complete {
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  bottom:30rpx;
+  display: inline-block;
+  padding:12rpx 25rpx;
+  border-radius:20rpx;
+  background-color: #55f;
+  font-size:30rpx;
+}
+.current {
+  color:rgb(230, 130, 49)
+}

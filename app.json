@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/message/message",
+    "pages/mine/mine",
+    "pages/create/create",
+    "pages/store/store",
+    "pages/createpaper/createpaper",
+    "pages/userInfo/userInfo",
+    "pages/classmanage/classmanage",
+    "pages/classmates/classmates",
+    "pages/publish/publish",
+    "pages/publishcheck/publishcheck",
+    "pages/test/test",
+    "pages/noticepage/noticepage"
+  ],
+  "sitemapLocation": "sitemap.json",
+  "window": {
+    "navigationBarTitleText": "雾课堂",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "课程",
+        "iconPath": "./images/nav/home-off.png",
+        "selectedIconPath": "./images/nav/home-on.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "./images/nav/order-off.png",
+        "selectedIconPath": "./images/nav/order-on.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "./images/nav/my-off.png",
+        "selectedIconPath": "./images/nav/my-on.png"
+      }
+    ],
+    "backgroundColor": "#ffffff",
+    "color": "#666",
+    "selectedColor": "#77f"
+  },
+  "cloud": true
+}

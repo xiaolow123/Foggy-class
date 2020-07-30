@@ -1,0 +1,15 @@
+<view class='class-wrapper'>
+  <view class='sub-wrapper'>
+    <text class='classname'>{{className}}</text>
+    <text class='info'>...</text>
+  </view>
+  <view wx:for='{{classarray}}'class='classes' bindtap='gotoclass' data-index='{{index}}'>
+    <view>{{item.classname}}</view>
+    <view>{{item.classmates.length}}人</view>
+    <view class='class-entry'>></view>
+  </view>  
+  <view class='sub-wrapper' wx:if='{{classDate !== ""}}'>
+    <text class='classDate'>{{classDate}}</text>
+    <text class='teacher'>{{teacher}}</text>
+  </view>  
+</view>

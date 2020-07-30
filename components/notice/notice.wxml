@@ -1,0 +1,10 @@
+<!--components/notice/notice.wxml-->
+<view class='notice-wrapper' bindtap="con">
+  <view class='notice-top'>
+    <text class='bigtext'>{{teacher}} 发布了新{{type}}</text>
+    <view class='notice-date'>{{date}}</view>
+  </view>
+  <text>{{classname}} -{{name}}  <text wx:if='{{follow === "listen"}}'>已发布，请尽快查收</text>
+  <text wx:if='{{follow === "teach"}}' class='studentread'>{{readstudents.length}}人阅读</text>
+  </text>
+</view>

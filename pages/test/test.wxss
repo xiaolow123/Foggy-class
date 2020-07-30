@@ -1,0 +1,31 @@
+/* pages/test/test.wxss */
+.name {
+  padding:20rpx;
+  text-align:center;
+}
+.disc {
+  padding:10rpx 30rpx
+}
+.radio-group {
+  padding:10rpx 30rpx
+}
+.radio-item {
+  padding:10rpx
+}
+.complete {
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  bottom:30rpx;
+  display: inline-block;
+  padding:12rpx 25rpx;
+  border-radius:20rpx;
+  background-color: #55f;
+  font-size:30rpx;
+}
+.lefttime {
+  position: fixed;
+  left:50%;
+  transform: translateX(-50%);
+  bottom:12%
+}

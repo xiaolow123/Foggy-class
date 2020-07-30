@@ -1,0 +1,27 @@
+<view class='mine-wrapper'>
+  <view class='userinfo'>
+    <view class='username'>{{username}}</view>
+    <image src='{{userimage}}' class='myimage'></image>
+  </view>
+  <view class='edit' bindtap='edit'>
+    编辑个人资料
+  </view>
+  <view class='icons-wrapper' bindtap='gotocourseware'>
+    <view class='icon-item'>
+      <image src='../../images/icon/coupons-off.svg'></image>
+      <text>我的课件库</text>
+      <view class='link'>></view>
+    </view>
+    <view class='icon-item' bindtap="gotopaper">
+      <image src='../../images/icon/kf.svg'></image>
+      <text>我的试卷库</text>
+      <view class='link'>></view>
+    </view>
+    <view class='icon-item'>
+      <image src='../../images/icon/list2.svg'></image>
+      <text>上传课件</text>
+      <view class='link'>></view>
+    </view>
+  </view>
+</view>
+

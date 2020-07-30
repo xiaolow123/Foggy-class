@@ -1,0 +1,62 @@
+<swiper class='swiper' autoplay='true'>
+  <swiper-item class='swiper-item' wx:for='{{swiperUrl}}'   wx:key='index'>
+    <image src='{{item}}' class='swiper-image'/>
+  </swiper-item>
+</swiper>
+<view class='icons-wrapper'>
+  <view class='icons'>
+    <view class='icon' bindtap='gotocourseware'>
+      <image src='../../images/icon/coupons-off.svg'/>
+      <text class='icon-text' >课件库</text>
+    </view>
+    <view class='icon' bindtap='gotopaper'>
+      <image src='../../images/icon/kf.svg'/>
+      <text class='icon-text'>试卷库</text>
+    </view>
+    <view class='icon' bindtap='save'>
+      <image src='../../images/icon/list2.svg'/>
+      <text class='icon-text'>上传课件</text>
+    </view>
+  </view>
+</view>
+<view class='class-wrapper'>
+  <text class='class-type {{now === 1?"class-now":""}}'
+ bindtap="change1">我教的课</text>
+  <text class='class-type {{now === 2?"class-now":""}}' bindtap="change2">我听的课</text>
+  <view class='class-add' bindtap="show"><text>+</text></view>
+</view>
+<scroll-view class='class-content' 
+             wx:for='{{listenClass}}' 
+             wx:key='index' 
+             wx:if='{{state === "listen"}}'
+             scroll-y='true'
+             >
+    <class className='{{item.coursename}}' classDate='{{item.date}}' teacher='{{item.teacher}}'></class>
+</scroll-view>
+<scroll-view class='class-content' 
+             wx:for='{{teachClass}}' 
+             wx:key='index' 
+             wx:if='{{state === "teach"}}'
+             scroll-y='true'
+             >
+    <class className='{{item.coursename}}' 
+           classarray='{{item.classarray}}' 
+           invitecode='{{item.invitecode}}'
+           ></class>
+</scroll-view>
+<view class='create-wrapper' wx:if='{{showModal}}' bindtap="cancel">
+  <view class='create'>
+    <text class='create-item' catchtap="createClass">创建课程</text>
+    <text class='create-item' catchtap="join">加入班级</text>
+    <text class='create-item' catchtap="createPaper">制作试卷</text>
+  </view>
+</view>
+<view class='join-wrapper' wx:if='{{ifjoin}}' bindtap="hidejoin">
+  <view class='join' catchtap>
+    <view class='join-complete' bindtap="complete">完成</view>
+    <view class='join-class'>
+      加入班级 (注:不区分大小写)
+    </view>
+    <input placeholder="请输入班级邀请码" class='join-input' bindinput='invitecodechange'></input>
+  </view>
+</view>

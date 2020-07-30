@@ -1,0 +1,50 @@
+<view class='title'>
+  <input placeholder="请输入试卷名称" maxlength="15" bindinput="namechange"/>
+</view>
+<view class='content'>
+  <view class='sidebar'>
+    <view class='wrapper'>
+      <view class='sideitem'>
+        <view>题目栏 </view>
+        <view bindtap='add' class='add'>+</view>
+      </view>
+      <view wx:for='{{titles}}' class='sideitem' wx:key='index' bindtap='chooseTitle' data-index='{{index}}'>
+        <view class='{{currentIndex === index ? "current" : ""}}'>{{index + 1}}.{{item.type}}</view>
+        <view class='delete' catchtap='delete' data-index='{{index}}'>删除</view>
+      </view>
+      <view class='complete' bindtap='complete'>完成</view>
+    </view>  
+  </view>
+  <view class='main'>
+    <view wx:if='{{current.type === "简答题"}}' class='simpleanswer'>
+      <textarea placeholder="此处添加题目描述" value='{{current.disc}}' bindinput='discchange'/>
+      <textarea placeholder="此处添加参考答案" value='{{current.answer}}' bindinput='answerchange'/>
+    </view>  
+    <scroll-view class='wrapper2' wx:if='{{current.type === "单选题" || current.type === "多选题"}}' scroll-y='true'>
+      <textarea placeholder="此处添加题目描述" class='disc' value='{{current.disc}}' bindinput='discchange'/>
+      <view wx:for='{{current.options}}' class='option'>
+        {{alphas[index]}} <input bindinput='inputchange' value="{{item}}" data-index='{{index}}' placeholder="此处添加选项内容" class='option-content' />
+      </view>    
+    </scroll-view> 
+    <view class="edit" wx:if='{{current.type === "单选题" || current.type === "多选题"}}'>
+      <view class="edittext">编辑习题</view>
+      <view class='tip'>请在下面的选项中给出正确答案</view>
+      <radio-group wx:if='{{current.type === "单选题"}}' bindchange='answerchange'>
+        <radio wx:for='{{current.options}}' value="{{alphas[index]}}"><text>{{alphas[index]}}</text></radio>
+      </radio-group>
+      <checkbox-group wx:if='{{current.type === "多选题"}}' bindchange='answerchange'>
+        <checkbox wx:for='{{current.options}}' value="{{alphas[index]}}"><text>{{alphas[index]}}</text></checkbox>
+      </checkbox-group>
+      <view bindtap='appendoption' class='addoption'>
+        添加选项
+      </view>
+    </view>
+    </view>
+</view>
+<view class='create-wrapper' wx:if='{{showModal}}' bindtap="cancel">
+  <view class='create'>
+    <text class='create-item' catchtap="createsingleselect">创建单选题</text>
+    <text class='create-item' catchtap="createmultiselect">创建多选题</text>
+    <text class='create-item' catchtap="createsimpleanswer">创建简答题</text>
+  </view>
+</view>

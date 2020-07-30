@@ -1,0 +1,2 @@
+<view class='name'>{{message.name}}</view>
+<textarea value='{{message.content}}' class='.textarea' disabled="true"></textarea>

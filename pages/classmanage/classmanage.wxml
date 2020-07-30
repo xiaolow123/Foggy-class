@@ -1,0 +1,43 @@
+<view class='header'>班级邀请码 : {{invitecode + index}}</view>
+<view class='usage-wrapper'>
+  <view class='usage' bindtap='showclassmates'>
+    <image src="../../images/icons/account-active.png"></image>
+    <view>课堂成员</view>
+  </view>
+  <view class='usage' bindtap='publishppt'>
+    <image src="../../images/icon/coupons-off.svg"></image>
+    <view>发布课件</view>
+  </view>
+  <view class='usage' bindtap='publishtest'>
+    <image src="../../images/icon/kf.svg"></image>
+    <view>发布试卷</view>
+  </view>
+  <view class='usage' bindtap='publishnotice'>
+    <image src="../../images/notice.png"></image>
+    <view>发布公告</view>
+  </view>
+</view>
+<view class='subheader'>教学日志</view>
+<view class='journal'>
+  <view class='journal-content {{focus === index ? "focus": ""}}' 
+        wx:for='{{journalarray}}' 
+        bindtap='focusitem'
+        data-index='{{index}}'
+        data-state='{{item}}'
+        >{{item}}</view>     
+</view>
+  <notice wx:for="{{messages}}"
+          teacher="你" 
+          type="{{item.type}}"
+          classname="{{item.classname}}"
+          name="{{item.name}}"
+          date="{{item.date}}"
+          class='{{item.ifread?"read":""}}'
+          readstudents='{{item.readstudents}}'
+          follow='teach'
+          data-index="{{index}}"
+          data-content='{{item.content}}'
+          wx:key='index'
+          wx:if='{{item.type===state || state==="全部"}}'
+          >
+  </notice>

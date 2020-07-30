@@ -1,0 +1,114 @@
+.swiper {
+  height:230rpx;
+}
+.swiper-image {
+  width:100%;
+  height:100%;
+}
+.icons-wrapper{
+  padding:15rpx
+}
+.icons {
+  display:flex;
+  height:200rpx;
+  width:100%;
+}
+.icon {
+  flex:1 0 33%;
+  height:100%;
+  position:relative;
+}
+.icon image {
+  height:70%;
+  width:33%;
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+}
+.icon-text {
+  text-align:center;
+  position:absolute;
+  top:63%;
+  left:0;
+  right:0;
+  font-size:28rpx
+}
+.class-wrapper {
+  display: flex;
+  font-size:30rpx;
+  border-bottom:solid 1px #ccc;
+  padding:9rpx
+}
+.class-type {
+  flex:0 0 25%;
+  text-align:center;
+  color:#555;
+}
+.class-now {
+  color:#333;
+  font-weight:bold;
+  font-size:36rpx;
+  line-height:1.2;
+}
+.class-add {
+  flex:1;
+  color:teal;
+}
+.class-add text {
+  background-color:rgb(204, 221, 245);
+  padding:0 17rpx;
+  position:relative;
+  left:300rpx;
+}
+.create-wrapper {
+  position:fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background-color:rgba(0,0,0,.5);
+  font-size:30rpx
+}
+.create {
+  display:flex;
+  position:absolute;
+  top:50%;
+  left:15%;
+  right:15%;
+  transform: translateY(-50%);
+  flex-direction:column;
+  background-color:#fff;
+  border-radius:15rpx;
+}
+.create-item {
+  padding:25rpx;
+}
+.join-wrapper {
+  position: fixed;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  background-color:rgba(0,0,0,.5);
+  font-size:32rpx;
+}
+.join {
+  position: absolute;
+  left:0;
+  right:0;
+  top:30%;
+  bottom:0;
+  background-color:#fff;
+}
+.join-complete {
+  text-align: right;
+  padding:12rpx;
+  border:1px solid #ccc;
+}
+.join-class {
+  padding:15rpx;
+}
+.join-input {
+  padding:15rpx;
+  border-bottom:1px solid #ccc;
+}
